@@ -10,28 +10,27 @@ namespace Blog.Repositories
 
         public Repository(SqlConnection connection)
             => _connection = connection;
-
         public IEnumerable<T> Get()
-            => _connection.GetAll<T>();
+            => DataBase.Connection.GetAll<T>();
 
         public T Get(int id)
-           => _connection.Get<T>(id);
+           => DataBase.Connection.Get<T>(id);
 
         public void Create(T model)
-            => _connection.Insert<T>(model);
+            => DataBase.Connection.Insert<T>(model);
 
         public void Update(T model)
         {
-            _connection.Update<T>(model);
+            DataBase.Connection.Update<T>(model);
         }
         public void Delete(T model)
         {
-            _connection.Delete<T>(model);
+            DataBase.Connection.Delete<T>(model);
         }
         public void Delete(int id)
         {
-            var model = _connection.Get<T>(id);
-            _connection.Delete<T>(model);
+            var model = DataBase.Connection.Get<T>(id);
+            DataBase.Connection.Delete<T>(model);
         }
     }
 }
