@@ -28,7 +28,7 @@ namespace Blog.Screens.UserScreens
                     CreateUserScreen.Load();
                     break;
                 case 3:
-                    Load();
+                    UserUpdateScreen.Load();
                     break;
                 case 4:
                     Load();
