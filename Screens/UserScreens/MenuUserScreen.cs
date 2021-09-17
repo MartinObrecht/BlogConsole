@@ -31,7 +31,7 @@ namespace Blog.Screens.UserScreens
                     UserUpdateScreen.Load();
                     break;
                 case 4:
-                    Load();
+                    DeleteUserScreen.Load();
                     break;
                 default: Load(); break;
             }
